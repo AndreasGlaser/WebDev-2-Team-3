@@ -1,0 +1,39 @@
+<html>
+<!DOCTYPE html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	
+</head>
+
+<body ng-app="myApp">
+	<p><a href="#/!">Home</a></p>
+	<a href="#!algebra">Algebra</a>
+	<a href="#!stream">Stream</a>
+	<a href="#!login">Login</a>
+	
+	<div ng-view></div>
+
+	<script>
+		var app = angular.module("myApp", ["ngRoute"]);
+		app.config(function($routeProvider){
+			$routeProvider
+			.when("/", {
+				templateUrl : "home.htm",
+			})
+			.when("/algebra", {
+				templateUrl : "algebra.htm",
+			})
+			.when("/stream", {
+				templateUrl : "stream.htm",
+			})
+			.when("/login", {
+				template : "<h1>Banana</h1><p>Bananas contain around 75% water.</p>"
+			});
+			
+		});
+	</script>
+
+</body>
+	
+</html>
