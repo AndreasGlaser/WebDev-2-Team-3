@@ -1,9 +1,9 @@
-<html>
 <!DOCTYPE html>
+<html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-	
+	<meta charset="UTF-8">
 </head>
 
 <body ng-app="myApp">
@@ -11,6 +11,8 @@
 	<a href="#!algebra">Algebra</a>
 	<a href="#!stream">Stream</a>
 	<a href="#!login">Login</a>
+	
+	<p> your Points: {{knowlegdePoints}}</p>
 	
 	<div ng-view></div>
 
@@ -23,16 +25,22 @@
 			})
 			.when("/algebra", {
 				templateUrl : "algebra.htm",
+				controller: 'algebraCtrl',
 			})
 			.when("/stream", {
 				templateUrl : "stream.htm",
 			})
 			.when("/login", {
-				template : "<h1>Banana</h1><p>Bananas contain around 75% water.</p>"
+				template : "<h1>Here will be the Login Page</h1>"
 			});
 			
 		});
+		
+		app.run(function($rootScope){
+			$rootScope.knowlegdePoints = 0;
+		});
 	</script>
+	<script src="algebraCtrl.js"></script>
 
 </body>
 	

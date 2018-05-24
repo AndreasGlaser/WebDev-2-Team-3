@@ -1,0 +1,35 @@
+Änderungen seit Sprint 1
+
+-neue struktur der einzelnen kapitel, abfolge geändert:
+	-Einleitung
+	-Beschreibung des Projektes
+	-Randbedingungen
+	-Erkundung/ Bewertung der Software/Frameworks
+	-Entwicklung des Prototypen
+		-Regelsätze
+		-Wireframes (in Sprint 3 eingefügt)
+		-User Stories
+	Ab 6. Projektplanung, noch nicht feiner Strukturiert
+
+	
+-Verzeichnisse für Tabellen und Bilder, Quellenverzeichnis folgt
+-Erklärung zur Selbstarbeit
+-Risikoanalyse in Anhang (Noch nicht in Dokument)
+-Einleitungstexte nach jeder Überschrift
+
+
+In Sprint 2 erledigtes:
+-UserStories
+-Screendesign/ wireframes
+-Präsentation
+-Risikoanalyse
+-SprintBacklog
+-GitHub Repository Regeln
+-Einarbeitung in Frameworks, erste Programmiererfahrungen
+
+
+FRAGEN AN HEYM:
+
+-Sollen wir anfangen, Module zu programmieren?
+-Sollen wir den Prototypen schon anfertigen oder weiter NUR Ideen dokumentieren?
+-Sollen Dokumente wie Backlog nach jedem Sprint in Doku aufgenommen werden?
