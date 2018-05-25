@@ -6,10 +6,54 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
+	
+	
 </head>
 
 <body ng-app="myApp">
+
+<!--Topbar-->
+<nav class="navbar navbar" style="background-color: lightblue">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Collaboratorive learning Game</a>
+    </div>
+    <ul class="nav navbar-nav">
+			<li><a href=""><span class="glyphicon glyphicon-bell gi-2x"></span>
+				<span class="label label-info" ng-hide="!isAnswerGiven">new</span></a>
+			</li>
+			<li><a href=""><span class="glyphicon glyphicon-envelope gi-2x"></span>
+				<span class="badge">{{newQuestionsCount}}</span></a>
+			</li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-user gi-2x"></span> Username<span class="caret"></span></a>
+		<ul class="dropdown-menu">
+          <li><a href="">Option 1</a></li>
+          <li><a href="">Option 2</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+	  </li>
+      
+    </ul>
+  </div>
+</nav>
+
+<!--session name and session Image-->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-3">
+				<h1>Math Royale</h1>
+			</div>
+			<div class="col-xs-9" >
+				 <left>
+				 <img src="logo_Math_Royale.png" class="img-rounded img-responsive" alt="School Image"> 
+				</left>
+			</div>
+		</div>
+	</div>	
 	
 	
 	<div class="container">
@@ -56,9 +100,11 @@
 			});
 			
 		});
-		
+	
 		app.run(function($rootScope){
 			$rootScope.knowlegdePoints = 0;
+			$rootScope.newQuestionsCount = 5;
+			$rootScope.isAnswerGiven = true;
 		});
 	</script>
 	<script src="algebraCtrl.js"></script>
