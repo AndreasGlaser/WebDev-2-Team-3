@@ -1,20 +1,127 @@
 
-<h1>Here you can do simple tasks to train your algebra skills</h1>
+<div class="jumbotron" style="background-color: lightblue">
 
-<h2>Question 1</h2>
-<p>To get a point answer "yes".</p>
-<p>Answer: <input type="text" ng-model="answer"></p>
+	<center>
+		<img src="../character/slice8.png" alt="Circle Wizzard" class="img-thumbnail" style="width: 150px; height: 250px">
+		<img src="../character/slice9.png" alt="Divide Monster" class="img-thumbnail" style="width: 150px; height: 250px">
+		<img src="../character/slice7.png" alt="Divide Monster" class="img-thumbnail" style="width: 150px; height: 250px">
+		<img src="../character/slice6.png" alt="Divide Monster" class="img-thumbnail" style="width: 150px; height: 250px">
+		<h1>GAME</h1>
+	</center>
 
-<button ng-click="submit()">Submit Answer</button>
+</div>
 
+<div id="questions" class="carousel slide" data-ride="carousel" style="background-color: lightblue; padding:30px">
 
+	<ol class="carousel-indicators">
+		<li data-target="#questions" data-slide-to="0" class="active"></li>
+		<li data-target="#questions" data-slide-to="1"></li>
+		<li data-target="#questions" data-slide-to="2"></li>
+	</ol>
+	
+	<!--Wrapper for slides-->
+	<div class="carousel-inner">
+		<div class="item active">
 
-<input type="checkbox"
-       ng-model="string"
-       [name="string"]
-       [ng-true-value="expression"]
-       [ng-false-value="expression"]
-       [ng-change="string"]>
+			<h2>Question 1</h2>
+			<p>Which expression could be used to find the value of</p>
+			<p>692+281</p>
+			<p>Choose 1 answer:</p>
+			
+			 <div class="form-check">
+				  <label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">600+90+2+28+1
+				  </label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">6+2+9+8+2+1
+				 </label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">600+200+90+80+2+1
+				</label>
+			</div> 
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">600+290+80+21
+				</label>
+			</div> 
+			
+		</div>
+		
+		<div class="item">
+			
+			<h2>Question 2</h2>
+			<p>Solve the equaltion</p>
+			<p>3+a=5</p>
+			<p>a=</p>
+			
+			 <div class="form-check">
+				  <label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">-2
+				  </label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">2
+				 </label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">3
+				</label>
+			</div> 
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">b
+				</label>
+			</div> 
+			
+		</div>
+		
+		<div class="item">
+		
+			<h2>Question 3</h2>
+			<p>Solve the equaltion</p>
+			<p>3+13=2x</p>
+			<p>x=</p>
+			
+			 <div class="form-check">
+				  <label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">16
+				  </label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">2
+				 </label>
+			</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">9
+				</label>
+			</div> 
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="optradio">8
+				</label>
+			</div> 
+		
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-9">
+			<button type="button" class="btn btn-success">Check</button>
+		</div>
+		<div class="col-xs-3">
+			<button type="button" class="btn btn-info">Info</button>
+			<button type="button" class="btn btn-warning">Help</button></div>
+		</div>
+</div>
+
 
 
 
