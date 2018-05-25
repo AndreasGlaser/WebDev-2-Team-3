@@ -10,14 +10,32 @@
 </head>
 
 <body ng-app="myApp">
-	<p><a href="#/!">Home</a></p>
-	<a href="#!algebra">Algebra</a>
-	<a href="#!stream">Stream</a>
-	<a href="#!login">Login</a>
 	
-	<p> your Points: {{knowlegdePoints}}</p>
 	
-	<div ng-view></div>
+	<div class="container">
+  <div class="row">
+    <div class="col-xs-1">
+      	<center>
+			<p><a href="#/!">Home</a></p>
+			<a href="#!algebra">Algebra</a>
+			<a href="#!stream">Stream</a>
+			<a href="#!login">Login</a>
+		</center>
+    </div>
+    <div class="col-xs-8">
+		<center>
+			<div ng-view></div>
+		</center>
+    </div>
+    <div class="col-xs-3">
+		<center>
+			<p> your Points: {{knowlegdePoints}}</p>
+		</center>
+	</div>
+  </div>
+</div>
+	
+	
 
 	<script>
 		var app = angular.module("myApp", ["ngRoute"]);
