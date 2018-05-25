@@ -8,7 +8,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
-	
+	<link href="Anzeige.css" rel="stylesheet">
 	
 </head>
 
@@ -57,27 +57,70 @@
 	
 	
 	<div class="container">
-  <div class="row">
-    <div class="col-xs-1">
-      	<center>
-			<p><a href="#/!">Home</a></p>
-			<a href="#!algebra">Algebra</a>
-			<a href="#!stream">Stream</a>
-			<a href="#!login">Login</a>
-		</center>
-    </div>
-    <div class="col-xs-8">
-		
-	<div ng-view></div>
-		
-    </div>
-    <div class="col-xs-3">
-		<center>
-			<p> your Points: {{knowlegdePoints}}</p>
-		</center>
+		<div class="row">
+			<div class="col-xs-1">
+				<center>
+					<p><a href="#/!">Home</a></p>
+					<a href="#!algebra">Algebra</a>
+					<a href="#!stream">Stream</a>
+					<a href="#!login">Login</a>
+				</center>
+			</div>
+			
+			<div class="col-xs-9">
+				<div ng-view></div>
+			</div>
+			
+			<div class="col-xs-2">
+				<center>
+					<h2> Amateur (Level1) </h2>
+				</center>
+			</div>
+			
+			<div class="col-xs-1">
+					
+					
+					<div class="progress blue">
+									<span class="progress-left">
+										<span class="progress-bar" ></span>
+									</span>
+									<span class="progress-right">
+										<span class="progress-bar"></span>
+									</span>
+									<div class="progress-value"  > 50% </div>
+								</div>
+					
+								
+			</div>
+			
+			<div class="col-xs-1">
+			
+				
+					<div class="progress yellow">
+					
+							
+								<span class="progress-left">
+									<span class="progress-bar"></span>
+								</span>
+								<span class="progress-right">
+									<span class="progress-bar"></span>
+								</span>
+							<div class="progress-value">50%</div> 
+						
+							
+				</div>
+                       
+			</div>
+			
+			<div class="col-xs-2">
+				<center>
+				<p id ="purple"> Knowledgepoints</p>
+				<p id ="blue"> Collaborationpoints</p>
+				</center>
+			</div>
+			
+		</div>
 	</div>
-  </div>
-</div>
 	
 	
 
