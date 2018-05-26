@@ -3,9 +3,9 @@
 }
 
 .progress{
-    width: 150px;
-    height: 150px;
-    line-height: 150px;
+    width: 120px;
+    height: 120px;
+    line-height: 140px;
     background: none;
     margin: 0 auto;
     box-shadow: none;
@@ -27,10 +27,13 @@
 
 #purple{
     color:orchid;
+	margin-top: 10px;
+	border: 1px solid orchid;
 }
 
 #blue{
     color:aqua;
+	border: 1px solid aqua;
 }
 .progress > span{
     width: 50%;
@@ -82,6 +85,11 @@
 .progress .progress-right{
     right: 0;    
 }
+
+.progress .progress-left{
+    left: 0;    
+}
+
 .progress .progress-right .progress-bar{
     left: -100%;
     border-top-left-radius: 80px;
@@ -95,8 +103,8 @@
     width: 90%;
     height: 90%;
     border-radius: 50%;
-    background: white;
-    font-size: 24px;
+    background: transparent;
+    font-size: 18px;
     color: black;
     line-height: 135px;
     text-align: center;
@@ -113,6 +121,12 @@
 .progress.yellow .progress-bar{
     border-color: orchid;
 }
+.progress.yellow {
+	position:relative;
+	left: -50px;
+}
+
+
 .progress.yellow .progress-left .progress-bar{
    /* animation: loading-5 1s linear forwards 1.8s; */
 }
