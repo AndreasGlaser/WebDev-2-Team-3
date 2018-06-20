@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 	<link href="Anzeige.css" rel="stylesheet">
-	
+
 </head>
 
 <body ng-app="myApp">
@@ -36,7 +36,7 @@
           <li><a href="#">Logout</a></li>
         </ul>
 	  </li>
-      
+
     </ul>
   </div>
 </nav>
@@ -49,13 +49,13 @@
 			</div>
 			<div class="col-xs-9" >
 				 <left>
-				 <img src="logo_Math_Royale.png" class="img-rounded img-responsive" alt="School Image"> 
+				 <img src="logo_Math_Royale.png" class="img-rounded img-responsive" alt="School Image">
 				</left>
 			</div>
 		</div>
-	</div>	
-	
-	
+	</div>
+
+
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-1">
@@ -66,20 +66,20 @@
 					<a href="#!login">Login</a>
 				</center>
 			</div>
-			
+
 			<div class="col-xs-9">
 				<div ng-view></div>
 			</div>
-			
+
 			<div class="col-xs-2">
 				<center>
 					<h2> Amateur (Level1) </h2>
 				</center>
 			</div>
-			
+
 			<div class="col-xs-1">
-					
-					
+
+
 					<div class="progress blue">
 									<span class="progress-left">
 										<span class="progress-bar" ></span>
@@ -89,40 +89,40 @@
 									</span>
 									<div class="progress-value"  > 50% </div>
 								</div>
-					
-								
+
+
 			</div>
-			
+
 			<div class="col-xs-1">
-			
-				
+
+
 					<div class="progress yellow">
-					
-							
+
+
 								<span class="progress-left">
 									<span class="progress-bar"></span>
 								</span>
 								<span class="progress-right">
 									<span class="progress-bar"></span>
 								</span>
-							<div class="progress-value">50%</div> 
-						
-							
+							<div class="progress-value">50%</div>
+
+
 				</div>
-                       
+
 			</div>
-			
+
 			<div class="col-xs-2">
 				<center>
 				<p id ="purple"> Knowledgepoints</p>
 				<p id ="blue"> Collaborationpoints</p>
 				</center>
 			</div>
-			
+
 		</div>
 	</div>
-	
-	
+
+
 
 	<script>
 		var app = angular.module("myApp", ["ngRoute"]);
@@ -133,25 +133,24 @@
 			})
 			.when("/algebra", {
 				templateUrl : "algebra.htm",
-				controller: 'algebraCtrl',
+				controller: 'algebraCtrl'
 			})
 			.when("/stream", {
-				templateUrl : "stream.htm",
+				templateUrl : "stream.htm"
 			})
 			.when("/login", {
-				template : "<h1>Here will be the Login Page</h1>"
+				template : "<h1>Here will be the Login Page</h1><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />"
 			});
-			
+
 		});
-	
+
 		app.run(function($rootScope){
 			$rootScope.knowlegdePoints = 0;
 			$rootScope.newQuestionsCount = 5;
 			$rootScope.isAnswerGiven = true;
-		});
+			});
 	</script>
 	<script src="algebraCtrl.js"></script>
 
 </body>
-	
 </html>
