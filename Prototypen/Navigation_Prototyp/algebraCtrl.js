@@ -13,24 +13,47 @@ app.controller('algebraCtrl', function($scope, $rootScope) {
 			function getQuestion(id) {
 				request = new XMLHttpRequest();
 				var url= 'getQuestion.php?id='+id;
-				console.log(url);
 				request.onreadystatechange = function() {
 					 addQuestion(id);
 				 }
 				request.open("GET", url, false);
 				request.send();
-				console.log(request.responseURL);
 			}
 
 			function addQuestion(id) {
-				console.log(request.readyState);
-				console.log(request.status);
 				if (request.readyState == 4 && request.status == 200) {
 					var div = document.createElement('div');
 					div.id = id;
 					div.className = "item";
 					div.innerHTML = request.responseText;
 					document.getElementById("carousel-inner").appendChild(div);
+				}
+			}
+
+			var handler = function() {
+				var active = document.getElementsByClassName("item active")[0];
+				var id = active.id;
+				var answer = active.querySelector('input[name = "optradio"]:checked');
+				request = new XMLHttpRequest();
+				var url= 'getAnswer.php?id='+id;
+				request.onreadystatechange = function() {
+					 showAnswer(id, answer);
+				 }
+				request.open("GET", url, true);
+				request.send();
+			};
+
+			var check = document.getElementsByClassName("btn btn-success")[0];
+			check.addEventListener("click", handler, false);
+
+			function showAnswer(id, answer) {
+				if (request.readyState == 4 && request.status == 200) {
+					if (request.responseText==answer.nextSibling.textContent){
+					 	answer.parentNode.parentNode.style="background-color:green;";
+					}
+					else {
+						answer.parentNode.parentNode.style="background-color:red;";
+					}
 				}
 			}
 		});
