@@ -51,6 +51,8 @@
 
 .progress.blue .progress-value{
     transform: rotate(180deg);
+    position: relative;
+    top: 25px;
 }
 .progress .progress-bar{
     width: 100%;
@@ -69,8 +71,6 @@
 #blue{
     color: aqua;   
 }
-
-
 
 
 .progress .progress-left .progress-bar{
@@ -123,10 +123,23 @@
 }
 .progress.yellow {
 	position:relative;
-	left: -50px;
+	left: 0px;
 }
 
+.advert-points{
 
+position: relative;
+top: 130px;
+right: 40px;
+}
+
+/*
+.advertContainer{
+    position:absolute;
+    left: 1100px;
+}
+
+*/
 .progress.yellow .progress-left .progress-bar{
    /* animation: loading-5 1s linear forwards 1.8s; */
 }
