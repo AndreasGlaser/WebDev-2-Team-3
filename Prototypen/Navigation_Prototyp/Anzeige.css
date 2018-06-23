@@ -112,18 +112,23 @@
     top: 5%;
     left: 5%;
 }
+
+
 .progress.blue .progress-bar{
     border-color: aqua;
 }
+
 .progress.blue .progress-left .progress-bar{
     /*animation: loading-2 1.5s linear forwards 1.8s; */
 }
-.progress.yellow .progress-bar{
+
+.progress.purple .progress-bar{
     border-color: orchid;
 }
-.progress.yellow {
+
+.progress.purple {
 	position:relative;
-	left: 0px;
+	left: 0px;              /*kann man noch verschieben, wenn es zu aneinander ist */
 }
 
 .advert-points{
@@ -133,14 +138,7 @@ top: 130px;
 right: 40px;
 }
 
-/*
-.advertContainer{
-    position:absolute;
-    left: 1100px;
-}
-
-*/
-.progress.yellow .progress-left .progress-bar{
+.progress.purple .progress-left .progress-bar{
    /* animation: loading-5 1s linear forwards 1.8s; */
 }
 

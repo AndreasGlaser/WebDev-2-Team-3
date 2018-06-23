@@ -6,9 +6,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-	<link href="Anzeige.css" rel="stylesheet">	
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<link href="Anzeige.css" rel="stylesheet">
 </head>
 
 <body ng-app="myApp">
@@ -17,7 +17,7 @@
 <nav class="navbar navbar" style="background-color: lightblue">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Collaboratorive learning Game</a>
+      <a class="navbar-brand" href="#">Collaborative Learning Game</a>
     </div>
       
     <!--notifications-->  
@@ -40,8 +40,7 @@
           <li><a href="#">Logout</a></li>
         </ul>
 	  </li>
-    </ul>
-      
+    </ul>      
   </div>
 </nav>
 
@@ -76,59 +75,53 @@
         <div class="col-xs-9">
             <div ng-view></div>
         </div>
-   
-        
-<!--The advertisement of the points-->
-    <div class="col-xs-2">
-        <div class = "advertContainer">
-        
-        <h3> Amateur (Level1) </h3>
     
-<!--KnowledgePoints-->
-<div class="col-xs-1">
-										
-    <div class="progress blue">
-        <span class="progress-left">
-            <span class="progress-bar" ></span>
-        </span>
-        <span class="progress-right">
-            <span class="progress-bar"></span>
-        </span>
+        <!--The advertisement of the points-->
+        <div class="col-xs-2">
+            <center>
+                <h3> Amateur (Level1) </h3>
+            </center>
 
-        <div class="progress-value"  > 50% </div>
-    </div>						
-</div>
-			
-<!--CollaborationPoints-->    
-<div class="col-xs-1">					
-    <div class="progress yellow">			
-        <span class="progress-left">
-            <span class="progress-bar"></span>
-        </span>
-        
-        <span class="progress-right">
-            <span class="progress-bar"></span>
-        </span>
-        <div class="progress-value">50%</div> 			
-    </div>           
-</div>
-        
-<div class="col-xs-1">
-  <div class = "advert-points">  
-    <center>
-        <p id ="purple"> Knowledgepoints</p>
-        <p id ="blue"> Collaborationpoints</p>
-    </center>
-    </div>  
+            <!--KnowledgePoints-->
+            <div class="col-xs-1">								
+                <div class="progress blue">
+                    <span class="progress-left">
+                        <span class="progress-bar" ></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value"  > 50% </div>
+                </div>						
+            </div>
+
+            <!--CollaborationPoints-->    
+            <div class="col-xs-1">					
+                <div class="progress purple">			
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+
+                    <span class="progress-right">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">50%</div> 			
+                </div>           
+            </div>
+
+            <div class="col-xs-2">
+              <div class = "advert-points">  
+                <center>
+                    <p id ="purple"> Knowledgepoints</p>
+                    <p id ="blue"> Collaborationpoints</p>
+                </center>
+              </div>  
+            </div>
+        </div>            
     </div>
-</div>            
 </div>
-</div>
-</div>
-        
-		
 
-
+    
 	<script>
 		var app = angular.module("myApp", ["ngRoute"]);
 		app.config(function($routeProvider){
@@ -138,25 +131,24 @@
 			})
 			.when("/algebra", {
 				templateUrl : "algebra.htm",
-				controller: 'algebraCtrl',
+				controller: 'algebraCtrl'
 			})
 			.when("/stream", {
-				templateUrl : "stream.htm",
+				templateUrl : "stream.htm"
 			})
 			.when("/login", {
-				template : "<h1>Here will be the Login Page</h1>"
+				template : "<h1>Here will be the Login Page</h1><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />"
 			});
-			
+
 		});
-	
+
 		app.run(function($rootScope){
 			$rootScope.knowlegdePoints = 0;
 			$rootScope.newQuestionsCount = 5;
 			$rootScope.isAnswerGiven = true;
-		});
+			});
 	</script>
 	<script src="algebraCtrl.js"></script>
 
 </body>
-	
 </html>
