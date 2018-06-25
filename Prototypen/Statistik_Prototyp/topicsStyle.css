@@ -1,0 +1,30 @@
+.diagramm{
+    height: 30px;
+    width: 200px;
+   
+    background-color: aqua;
+}
+h1 {
+    margin-bottom: 30px;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.diagramm-content{
+    
+    position: relative;
+    top: 4px;
+    left: 3px;
+}
+
+.progress {
+    position: relative;
+    top: 10px;
+}
+
+.points{
+    position: relative;
+    top: 5px;
+}

@@ -3,6 +3,7 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -82,7 +83,6 @@
                 </div>
  
             <div class="col-xs-1">
-
                 <div class="progress blue">
                     <span class="progress-left">
                         <span class="progress-bar" ></span>
@@ -92,11 +92,9 @@
                     </span>
                 <div class="progress-value"  > 50% </div>
                 </div>
- 
             </div>
  
             <div class="col-xs-1">
-  
                 <div class="progress purple">
                     <span class="progress-left">
                         <span class="progress-bar"></span>
@@ -115,11 +113,50 @@
             </div>
         </div>
     </div>
- 
-
 
 	<script>
-		var app = angular.module("myApp", ["ngRoute"]);
+		
+        //Prozentanzahl, die nun angezeigt werden soll ist gemeint
+        //flag ist hierbei obs Knowledge oder Collaborationpoints sein sollen - geht leider nicht, aber so haette ichs gedacht
+        function updateAssert (procent, flag){
+            if (procent<=50){
+                
+                procent = procent*3,6;
+                
+                $.keyframe.define([{
+                       name  : 'myfirst',
+                       '0%':    { transform: "rotate(0deg)"},
+                       '100%':  { transform: rotate(proecent+"deg")}
+                }]);
+                
+                    if (flag == "collaboration"){
+                        $(".progress.blue .progress-left .progress-bar").css("animation: myfirst 1.5s linear forwards 1.8s;");    
+                    }else if (flag == "knowledge"){
+                        $(".progress.purple .progress-left .progress-bar").css("animation: myfirst 1.5s linear forwards 1.8s;");  
+                    }    
+            }else if (procent>50 && procent <=100){
+                procent = procent-50;
+                procent = procent*3,6;
+                
+                $.keyframe.define([{
+                       name  : 'myfirst',
+                       '0%':    { transform: "rotate(0deg)"},
+                       '100%':  { transform: rotate(proecent+"deg")}
+                }]);
+                
+                if (flag == "collaboration"){
+                        $(".progress.blue .progress-left .progress-bar").css("animation:loading-1 1.5s linear forwards 1.8s;");
+                        $(".progress.blue .progress-right .progress-bar").css("animation: myfirst 1.5s linear forwards 1.8s;");
+                        
+                }else if (flag == "knowledge"){
+                      $(".progress.purple .progress-left .progress-bar").css("animation:loading-1 1.5s linear forwards 1.8s;");
+                      $(".progress.purple .progress-right .progess-bar").css("animation: myfirst 1.5s linear forwards 1.8s;");
+                }
+            }
+        }
+        
+    
+        var app = angular.module("myApp", ["ngRoute"]);
 		app.config(function($routeProvider){
 			$routeProvider
 			.when("/", {
@@ -135,9 +172,8 @@
 			.when("/login", {
 				template : "<h1>Here will be the Login Page</h1><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />"
 			});
-
 		});
-
+        
 		app.run(function($rootScope){
 			$rootScope.knowlegdePoints = 0;
 			$rootScope.newQuestionsCount = 5;

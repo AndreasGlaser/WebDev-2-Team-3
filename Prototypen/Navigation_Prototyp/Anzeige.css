@@ -1,7 +1,3 @@
-.container{
-    
-}
-
 .progress{
     width: 120px;
     height: 120px;
@@ -12,30 +8,17 @@
     position: relative;
 }
 
-/*
-.progress:after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 12px solid #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-*/
-
 #purple{
     color:orchid;
 	margin-top: 10px;
 	border: 1px solid orchid;
 }
-
 #blue{
     color:aqua;
 	border: 1px solid aqua;
 }
-.progress > span{
+
+.progress > span{           /*Da*/
     width: 50%;
     height: 100%;
     overflow: hidden;
@@ -63,25 +46,12 @@
     position: absolute;
     top: 0;
 }
-
 #purple{
     color: mediumpurple;   
 }
-
 #blue{
     color: aqua;   
 }
-
-
-.progress .progress-left .progress-bar{
-    left: 100%;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-    border-left: 0;
-    -webkit-transform-origin: center left;
-    transform-origin: center left;
-}
-
 .progress .progress-right{
     right: 0;    
 }
@@ -89,17 +59,17 @@
 .progress .progress-left{
     left: 0;    
 }
-
-.progress .progress-right .progress-bar{
-    left: -100%;
-    border-top-left-radius: 80px;
-    border-bottom-left-radius: 80px;
-    border-right: 0;
-    -webkit-transform-origin: center right;
-    transform-origin: center right;
-    animation: loading-1 1.8s linear forwards;
+.progress.purple {
+	position:relative;
+	left: 0px;              /*kann man noch verschieben, wenn es zu aneinander ist */
 }
-.progress .progress-value{
+.progress.purple .progress-bar{
+    border-color: orchid;
+}
+.progress.blue .progress-bar{
+    border-color: aqua;
+}
+.progress .progress-value{                  /*Der Wert in der Progressbar*/
     width: 90%;
     height: 90%;
     border-radius: 50%;
@@ -113,42 +83,63 @@
     left: 5%;
 }
 
+/*Fuer die Animationen*/
 
-.progress.blue .progress-bar{
-    border-color: aqua;
+/*Hinterer Teil der Process Bar - von beiden*/
+.progress .progress-left .progress-bar{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    transform-origin: center left;                          /*sorgt dafür, dass es rund wird!*/
+    /*animation: loading-1 1.8s linear forwards; */
 }
-
+/*Vorderer Teil der Process Bar - von beiden*/
+.progress .progress-right .progress-bar{
+    left: -100%;
+    border-top-left-radius: 80px;                   /*Transformiert beide enden der Progressbar */
+    border-bottom-left-radius: 80px;                /*   das ist auch dr Grund dafür, dass man eben zwei Progressbars braucht */
+    border-right: 0;
+    transform-origin: center right;
+    /*animation: loading-1 1.8s linear forwards; */
+}
 .progress.blue .progress-left .progress-bar{
-    /*animation: loading-2 1.5s linear forwards 1.8s; */
-}
-
-.progress.purple .progress-bar{
-    border-color: orchid;
-}
-
-.progress.purple {
-	position:relative;
-	left: 0px;              /*kann man noch verschieben, wenn es zu aneinander ist */
-}
-
-.advert-points{
-
-position: relative;
-top: 130px;
-right: 40px;
+   /* animation: loading-1 1.5s linear forwards 1.8s; */  
 }
 
 .progress.purple .progress-left .progress-bar{
-   /* animation: loading-5 1s linear forwards 1.8s; */
+   /* animation: loading-1 1.5s linear forwards 1.8s;  */
+}
+
+.progress.purple .progress-right .progress-bar{
+   /*-webkit-transform-origin: center right;
+    transform-origin: center right;
+    */
+    animation: loading-1 1s linear forwards 1.8s;         
 }
 
 
+.progress.blue .progress-right .progress-bar{
+   /*-webkit-transform-origin: center right;
+    transform-origin: center right;
+    */
+    animation: loading-1 1s linear forwards 1.8s;         
+}
+
+
+.advert-points{
+
+    position: relative;
+    top: 130px;
+    right: 40px;
+    }
+  
 /*Wir brauchen an sich nicht alle keyframes...das kann man über eine Funktion
   definieren dann später */
 
 
-@keyframes loading-1{
-    1000%{
+@keyframes loading-1{                           /*Ein Halbkreis komplett gefüllt*/
+    0%{
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
@@ -157,11 +148,11 @@ right: 40px;
         transform: rotate(180deg);
     }
 }
-@keyframes loading-2{
-    0%{
+@keyframes loading-2{                                       /*keyframe sorgt für den Effekt, das es von 0 auf 144 Grad gefüllt wird*/
+    0%{                                                     
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
-    }
+    } ge
     100%{
         -webkit-transform: rotate(144deg);
         transform: rotate(144deg);
