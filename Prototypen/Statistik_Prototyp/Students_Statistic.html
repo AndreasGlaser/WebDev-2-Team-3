@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+    <link href="Anzeige.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-app="myApp">
+    <div class="container" id="students_statistic">
+        <div class="row">
+            <div class="col-xs-8 col-xs-push-2">
+                <center>
+                    <h1>Students Statistic</h1>
+                </center>
+            </div>
+        </div>
+        <div class="col-xs-8 col-xs-push-2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Equations</th>
+                        <th>Inequalities</th>
+                        <th>Functions</th>
+                        <th>Linear Equations</th>
+                        <th>Polynomial</th>
+                        <th>Quadratic Equations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="studentName"></td>
+                        <td>
+                            <div class="progress">
+                                <div id="equations" class="progress-bar" role="progressbar" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">0%
+                                </div>
+                            </div>
+                         </td>
+                        <td>
+                            <div class="progress">
+                                <div id="inequalities" class="progress-bar" role="progressbar" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">0%
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div id="functions" class="progress-bar" role="progressbar" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">0%
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div id="linequations" class="progress-bar" role="progressbar" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">0%
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div id="polynomial" class="progress-bar" role="progressbar" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">0%
+                                </div>
+                            </div>
+                        </td>
+                         <td>
+                            <div class="progress">
+                                <div id="quadrequations" class="progress-bar" role="progressbar" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">0%
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

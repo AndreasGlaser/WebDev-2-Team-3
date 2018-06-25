@@ -1,11 +1,14 @@
+th, td {text-align: center;
+        width: 14%;}
+.progress-bar {color: black;}
+
+h1 {margin-bottom: 30px;}
+
 .diagramm{
     height: 30px;
     width: 200px;
    
     background-color: aqua;
-}
-h1 {
-    margin-bottom: 30px;
 }
 
 .row {
