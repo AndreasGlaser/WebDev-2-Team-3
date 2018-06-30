@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-</head>
-<body>
-<div class="jumbotron" style="background-color: lightblue">
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<div class="jumbotron" style="background-color: lightblue">
 
-	<center>
-		<img src="../character/slice8.png" alt="Circle Wizzard" class="img-thumbnail" style="width: 150px; height: 250px">
-		<img src="../character/slice9.png" alt="Divide Monster" class="img-thumbnail" style="width: 150px; height: 250px">
-		<img src="../character/slice7.png" alt="Divide Monster" class="img-thumbnail" style="width: 150px; height: 250px">
-		<img src="../character/slice6.png" alt="Divide Monster" class="img-thumbnail" style="width: 150px; height: 250px">
-		<h1>GAME</h1>
-	</center>
+			<center>
+				<img src="character/slice8.png" alt="Circle Wizzard" class="img-thumbnail" style="width: 150px; height: 250px">
+				<img src="character/slice9.png" alt="Divide Monster" class="img-thumbnail" style="width: 150px; height: 250px">
+				<img src="character/slice7.png" alt="Divide Monster" class="img-thumbnail" style="width: 150px; height: 250px">
+				<img src="character/slice6.png" alt="Divide Monster" class="img-thumbnail" style="width: 150px; height: 250px">
+				<h1>GAME</h1>
+			</center>
 
-</div>
-
-<div id="questions" class="carousel slide" data-ride="carousel" style="background-color: lightblue; padding:30px">
-
-	<ol class="carousel-indicators">
-		<li data-target="#questions" data-slide-to="0" class="active"></li>
-		<li data-target="#questions" data-slide-to="1"></li>
-		<li data-target="#questions" data-slide-to="2"></li>
-		<li data-target="#questions" data-slide-to="3"></li>
-		<li data-target="#questions" data-slide-to="4"></li>
-		<li data-target="#questions" data-slide-to="5"></li>
-		<li data-target="#questions" data-slide-to="6"></li>
-		<li data-target="#questions" data-slide-to="7"></li>
-		<li data-target="#questions" data-slide-to="8"></li>
-		<li data-target="#questions" data-slide-to="9"></li>
-	</ol>
-
-	<!--Wrapper for slides-->
-	<div class="carousel-inner" id="carousel-inner">
-			
-	</div>
-
-	<div class="row">
-		<div class="col-xs-9">
-			<button type="button" class="btn btn-success">Check</button>
 		</div>
-		<div class="col-xs-3">
-			<button type="button" class="btn btn-info">Info</button>
-			<button type="button" class="btn btn-warning">Help</button></div>
+
+		<div id="questions" class="carousel slide" data-interval="false" data-ride="carousel" style="background-color: lightblue; padding:30px">
+
+			<ol class="carousel-indicators">
+				<li data-target="#questions" data-slide-to="0" class="active" id="firstIndicator"></li>
+				<li data-target="#questions" data-slide-to="1"></li>
+				<li data-target="#questions" data-slide-to="2"></li>
+				<li data-target="#questions" data-slide-to="3"></li>
+				<li data-target="#questions" data-slide-to="4"></li>
+				<li data-target="#questions" data-slide-to="5"></li>
+				<li data-target="#questions" data-slide-to="6"></li>
+				<li data-target="#questions" data-slide-to="7"></li>
+				<li data-target="#questions" data-slide-to="8"></li>
+				<li data-target="#questions" data-slide-to="9"></li>
+			</ol>
+
+			<div class="carousel-inner" id="carousel-inner">
+
+			</div>
+
+			<div class="row">
+				<div class="col-xs-9">
+					<button type="button" class="btn btn-success" id="checkButton">Check</button>
+					<button type="button" class="btn btn-light" id="continueButton">Continue</button>
+				</div>
+				<div class="col-xs-3">
+					<button type="button" class="btn btn-info" id="infoButton">Info</button>
+					<button type="button" class="btn btn-warning" id="helpButton">Help</button></div>
+				</div>
+			</div>
+
+			<div id="myModal" class="modal">
+				<span class="close"><br><br>&times;</span>
+				<img class="modal-content" id="img01">
+				<div id="caption"></div>
+			</div>
 		</div>
-</div>
-</body>
+	</body>
 </html>
